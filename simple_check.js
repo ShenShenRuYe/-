@@ -28,7 +28,7 @@ sleep(5000);
 console.log("查找目标打卡控件...");
 var punchInButton = id("com.alibaba.android.rimet:id/im_ding_kit_item_txt")
     .text("打卡")
-    .boundsInside(710, 388, 800, 441) // 精确匹配坐标范围;
+
     .findOne(10000)
 
 
@@ -42,37 +42,35 @@ if (punchInButton) {
     exit();
 }
 
-// 查找并点击第二个目标控件：企业 dsy
+// 查找并点击第二个目标控件：企业 
 console.log("查找目标企业控件...");
 var companyButton = id("com.alibaba.android.rimet:id/tv_org_name")
-    .text("[你所要打卡的企业]")
+    .text("【你需要修改】")
     .findOne(10000);
 
 if (companyButton) {
     console.log("找到目标企业控件，尝试点击...");
     click(companyButton.bounds().centerX(), companyButton.bounds().centerY());
-    console.log("点击企业控件成功！");
-    sleep(10000); // 等待页面加载
+    console.log("点击企业控件成功！")
+   
 } else {
     console.log("未找到目标企业控件！");
     exit();
 }
 
+sleep(10000); // 等待页面加载
 // 点击指定控件
 console.log("查找目标控件...");
-var targetControl = className("com.uc.aosp.android.webkit.m0")
-    .clickable(true) // 确保控件是可点击的
-    .findOne(10000);
 
-if (targetControl) {
-    console.log("找到目标控件，尝试点击...");
-    click(targetControl.bounds().centerX(), targetControl.bounds().centerY());
-    console.log("目标控件点击成功！");
-    sleep(2000);
-} else {
-    console.log("未找到目标控件！");
-}
 
+// 点击的坐标
+var x = 540;
+var y = 1200;
+
+// 点击事件
+click(x, y);
+sleep(10000);
+console.log("点击目标控件！");
 // 查找并点击关闭按钮
 console.log("查找关闭按钮...");
 var closeButton = id("com.alibaba.android.rimet:id/close_layout")

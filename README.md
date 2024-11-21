@@ -9,7 +9,7 @@
 
 ## 🌟 简介
 
-- 基于 [Autox.js](http://doc.autoxjs.com/#/)（版本 6.6.6）。
+- 基于 [Autox.js](http://doc.autoxjs.com/#/)。
 - 开发工具：VS Code。
 - 实现了钉钉的自动化随机时间范围内打卡功能。
 - 易于配置，支持快速调试和测试。
@@ -28,7 +28,7 @@
    - 在 VS Code 中按下 `Ctrl+Shift+P`，选择 **Autox.js: 开启服务**。
 
 4. **连接手机**
-   - 使用 USB 数据线或其他方式，将手机上的 Autox.js 与电脑连接。
+   - 参照Autox.js文档，将手机上的 Autox.js 与电脑连接。
 
 5. **测试环境**
    - 运行 `list_all.js` 脚本，确保环境配置正确。
